@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPIC - Tech</title>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="../images/icon.png" type="image/x-icon" /> 
+    
+    <style>
+@media only screen and (max-width: 768px) {
+  .flex ul,.loginb {
+    display: none;
+  }
+}
+.hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+
+    .product-container .btnCart {
+    display: none;
+}
+
+.product-container:hover .btnCart {
+    display: block;
+}
+
+
+
+      </style>
+  </head>
+
+  <body>
+
+    <!-- Start Header -->
+    <header class="py-4 shadow-sm bg-gray-100">
+        <div class="container flex flex-wrap items-center justify-between">
+          <!-- logo -->
+          <a href="#">
+            <p style="font-size: 30px">
+              <span class="text-primary">Epic</span>Tech
+            </p>
+          </a>
+          <!-- search bar -->
+          <div class="w-full max-w-xl relative flex">
+            <span class="absolute left-4 top-3 text-lg text-gray-400">
+              <i class="fas fa-search"></i>
+            </span>
+            <input
+              type="text"
+              class="w-full border border-primary border-r-0 pl-12 py-3 pr-10 rounded-l-md focus:outline-none"
+              placeholder="search ..."
+            />
+            <button
+              class="absolute right-0 top-0 bg-primary border-primary text-white px-8 py-3 rounded-r-md hover:bg-transparent hover:text-primary transition"
+            >
+              Search
+            </button>
+          </div>
+          <!-- Icon -->
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <!-- wishlist -->
+            <a
+              href="WishList.html"
+              class="text-center text-gray-700 hover:text-primary transition relative"
+            >
+              <div class="text-2xl">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="text-xs leading-3">Wish List</div>
+              <span
+                class="absolute right-0 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                >2</span
+              >
+            </a>
+            <!-- cart -->
+            <a
+              href="Cart.html"
+              class="text-center text-gray-700 hover:text-primary transition relative"
+            >
+              <div class="text-2xl">
+                <i class="fas fa-shopping-bag" ></i>
+              </div>
+              <div class="text-xs leading-3" >Cart</div> 
+              <span
+                class="absolute -right-3 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                >2</span
+              >
+            </a>
+            <!-- Account -->
+            <a
+              href="UserProfile.html"
+              class="text-center text-gray-700 hover:text-primary transition relative"
+            >
+              <div class="text-2xl">
+                <i class="far fa-user"></i>
+              </div>
+              <div class="text-xs leading-3">Account</div>
+            </a>
+          </div>
+        </div>
+      </header>
+    <!-- Header END -->
+
+    <!-- Start Navbar -->
+    <nav class="bg-gray-800 ">
+        <div class="max-w-screen-xl h-16 mx-auto px-4 flex items-center justify-between">
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-8 ">
+                <ul class="flex flex-col md:flex-row font-medium space-y-4 md:space-y-0 md:space-x-8">
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="#Projects" class="text-gray-200 hover:text-white transition">Top sales</a>
+                    </li>
+                    <li>
+                        <a href="aboutUs.html" class="text-gray-200 hover:text-white transition">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contactUs.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Login/Register Button -->
+            <a href="Login.html" type="button" class="text-white bg-primary loginb hover:bg-white
+             hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 
+             text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</a>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden" id="navbar-cta">
+            <ul class="flex flex-col font-medium p-4 mt-4 border rounded-lg md:flex-row md:mt-0 md:border-0">
+                <li>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Shop</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-200 hover:text-white transition">About Us</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                </li>
+            </ul>
+            <button type="button" class="text-white mb-8 bg-primary hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+
+           
+        </div>
+    </nav>
+    <!-- navbar END -->
+
+
+
+
+
+
+    <div class="container flex flex-wrap items-center justify-between">
+    <img class="h-auto max-w-full w-full rounded" src="../images/Header.png" alt="image description">
+    </div>
+
+
+<!-- Start Features -->
+<div class="h-auto max-h-screen w-full bg-gray-100 pt-12 p-4">
+    <div class="grid gap-14 md:grid-cols-3 md:gap-5">
+        <div class="rounded-xl bg-white p-6 text-center shadow-xl">
+            <div class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-gray-200 shadow-lg shadow-teal-500/40">
+                <img src="../images/money-back.svg" alt="" class="w-12 h-12 object-cover">
+            </div>
+            <h1 class="text-darken mb-3 text-xl font-medium lg:px-14">Money Return</h1>
+            <p class="px-4 text-gray-500">30 Days Money Return</p>
+        </div>
+        <div data-aos-delay="150" class="rounded-xl bg-white p-6 text-center shadow-xl">
+            <div class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-gray-200 shadow-rose-500/40">
+                <img src="../images/delivery-van.svg" alt="">
+            </div>
+            <h1 class="text-darken mb-3 text-xl font-medium lg:px-14 ">Free Shipping</h1>
+            <p class="px-4 text-gray-500">Order over 200$ for free Shipping</p>
+        </div>
+        <div data-aos-delay="150" class="rounded-xl bg-white p-6 text-center shadow-xl">
+            <div class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-gray-200 shadow-rose-500/40">
+                <img src="../images/service-hours.svg" alt="">
+            </div>
+            <h1 class="text-darken mb-3 text-xl font-medium lg:px-14 ">24/7 support</h1>
+            <p class="px-4 text-gray-500">Customer Support</p>
+        </div>
+    </div>
+</div>
+
+  <!-- Features End -->
+
+
+<!-- catego start -->
+
+<!-- component -->
+
+
+   
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="hidden w-full text-gray-600 md:flex md:items-center">
+
+                </div>
+                <h1 class="w-full text-gray-700 md:text-center text-4xl mt-5 font-semibold">
+                    Shop by Categories
+                </h1>
+                <div class="flex items-center justify-end w-full">
+
+
+                    <div class="flex sm:hidden">
+
+                    </div>
+                </div>
+            </div>
+
+        
+ 
+
+    <main class="my-8">
+      
+        <div class="container mx-auto px-6">
+
+
+            <div class="mt-16">
+                <a href="SmartphonePage.html"> 
+                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+                   <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer  hover-scale" >
+                     <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('../images/Products/Smart\ Phone.jpg')">
+
+                        </div>
+                        <div class="px-5 py-3">
+                             <h3 class="text-gray-700 uppercase">Smart Phones</h3>
+                            
+                        </div>
+                    </div>
+                </a>
+                    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer hover-scale  ">
+                        <div class="flex items-end justify-end h-56 w-full bg-contain" style="background-image: url('../images/Products/HeadPhones.jpg')">
+
+                        </div>
+                        <div class="px-5 py-3">
+                            <h3 class="text-gray-700 uppercase">HeadPhones</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer hover-scale">
+                        <div class="flex items-end justify-end h-56 w-full bg-contain" style="background-image: url('../images/Products/laptop.jpg')">
+  
+                        </div>
+                        <div class="px-5 py-3">
+                            <h3 class="text-gray-700 uppercase">laptop</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer hover-scale">
+                        <div class="flex items-end justify-end h-56 w-full bg-contain" style="background-image: url('../images/Products/Watch.jpg')">
+
+                        </div>
+                        <div class="px-5 py-3">
+                            <h3 class="text-gray-700 uppercase">Watches</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer hover-scale">
+                        <div class="flex items-end justify-end h-56 w-full bg-contain " style="background-image: url('../images/Products/Drone.jpg')">
+
+                        </div>
+                        <div class="px-5 py-3">
+                            <h3 class="text-gray-700 uppercase">Drone</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer hover-scale">
+                        <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('../images/Products/Airpbuds.jpg')">
+
+                        </div>
+                        <div class="px-5 py-3">
+                            <h3 class="text-gray-700 uppercase">Airpbuds</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer hover-scale">
+                        <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('../images/Products/Gaming.jpg')">
+
+                        </div>
+                        <div class="px-5 py-3">
+                            <h3 class="text-gray-700 uppercase">Gaming Console</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer hover-scale">
+                        <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('../images/Products/LCD\ TV.jpg')">
+
+                        </div>
+                        <div class="px-5 py-3">
+                            <h3 class="text-gray-700 uppercase">LCD TV</h3>
+                            
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+       
+    </main>
+
+
+</div>
+
+
+
+
+<!-- catego End -->
+
+<!-- shop by brand -->
+
+<div class="container mx-auto px-6 py-3">
+  <div class="flex items-center justify-between">
+      <div class="hidden w-full text-gray-600 md:flex md:items-center">
+
+      </div>
+      <h1 class="w-full text-gray-700 md:text-center text-4xl mt-5 font-semibold">
+          Shop by Brand
+      </h1>
+      <div class="flex items-center justify-end w-full">
+
+
+          <div class="flex sm:hidden">
+
+          </div>
+      </div>
+  </div>
+
+
+
+
+<main class="my-8">
+
+<div class="container mx-auto px-6">
+
+
+  <div class="mt-16">
+      
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+        <a href="Microsoftpage.html"> 
+         <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer  hover-scale  " >
+         
+           <div class="flex items-end justify-end h-56 w-full  bg-contain bg-center" style="background-image: url('../images/icons/Micro.jpg')">
+            
+              </div>
+
+          </div>
+      </a>
+      <a href="#"> 
+        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer  hover-scale  " >
+        
+          <div class="flex items-end justify-end h-56 w-full  bg-contain bg-center" style="background-image: url('../images/icons/Sony.png')">
+           
+             </div>
+
+         </div>
+     </a>
+     <a href="#"> 
+      <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer  hover-scale  " >
+      
+        <div class="flex items-end justify-end h-56 w-full   bg-contain bg-center" style="background-image: url('../images/icons/Apple.jpg')">
+         
+           </div>
+
+       </div>
+   </a>
+   <a href="#"> 
+    <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden cursor-pointer  hover-scale  " >
+    
+      <div class="flex items-end justify-end h-56 w-full  bg-contain bg-center" style="background-image: url('../images/icons/konami_logo.webp')">
+       
+         </div>
+
+     </div>
+ </a>
+
+  
+
+          
+      </div>
+  </div>
+  
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- shop by brand Ends -->
+
+<hr class="w-100 h-px my-8 bg-slate-700 border-0 dark:bg-gray-700">
+
+<div class="inline-flex items-center justify-center w-full">
+    <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
+    <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+      <h2><span class="text-4xl text-gray-900"> Sale  </span></h2>
+    </div>
+</div>
+
+
+
+
+
+<section id="Projects"
+  class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+
+  <!--   ✅ Product card 1 - Starts Here 👇 -->
+  <div class="product-container w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+    <a href="Product.html">
+        <img class="bg-contain" src="../images/Products/1.jpg" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+
+        <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">Sony</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">PS4 - Blue Controller</p>
+
+            <div class="flex items-center">
+                <p class="text-lg font-semibold text-black cursor-auto my-3">$800</p>
+                <del>
+                    <p class="text-sm text-gray-600 cursor-auto ml-2">$2200</p>
+                </del>
+                <div class="ml-auto"> 
+                    <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="ml-auto"> 
+                <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+            </div>
+        </div>
+    </a>
+</div>
+
+  <!--   🛑 Product card 1 - Ends Here  -->
+
+  <!--   ✅ Product card 2 - Starts Here 👇 -->
+  <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+    <a href="Product.html">
+        <img class="bg-contain" src="../images/Products/2.jpg"
+                alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+        <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">sony</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">Sony Playstation 5 Standard ( 2 Years Warranty From 2B )</p>
+            <div class="flex items-center">
+                <p class="text-lg font-semibold text-black cursor-auto my-3">$4099</p>
+                <del>
+                    <p class="text-sm text-gray-600 cursor-auto ml-2">$4900</p>
+                </del>
+                <div class="ml-auto"> 
+                  <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                      <i class="far fa-heart"></i>
+                  </button>
+              </div>
+            </div>
+            <div class="ml-auto"> 
+                <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+            </div>
+        </div>
+    </a>
+</div>
+  <!--   🛑 Product card 2- Ends Here  -->
+
+  <!--   ✅ Product card 3 - Starts Here 👇 -->
+  <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+    <a href="#">
+        <img class="bg-contain" src="../images/Products/3.jpg"
+                alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+        <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">sony</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">Balack Playstation 5 Standard ( 2 Years Warranty From 2B )</p>
+            <div class="flex items-center">
+                <p class="text-lg font-semibold text-black cursor-auto my-3">$4599</p>
+                <del>
+                    <p class="text-sm text-gray-600 cursor-auto ml-2">$4900</p>
+                </del>
+                <div class="ml-auto"> 
+                  <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                      <i class="far fa-heart"></i>
+                  </button>
+              </div>
+            </div>
+            <div class="ml-auto"> 
+                <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+            </div>
+        </div>
+    </a>
+</div>
+  <!--   🛑 Product card 3 - Ends Here  -->
+
+  <!--   ✅ Product card 4 - Starts Here 👇 -->
+  <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+    <a href="#">
+        <img class="bg-contain" src="../images/Products/4.jpg"
+                alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+        <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">Samsung</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">Samsung G5 Odyssey Gaming MONITOR 27 LC27G55TQBMXEG144HZ 2K CURVED</p>
+            <div class="flex items-center">
+                <p class="text-lg font-semibold text-black cursor-auto my-3">$6799</p>
+                <del>
+                    <p class="text-sm text-gray-600 cursor-auto ml-2">$9900</p>
+                </del>
+                <div class="ml-auto"> 
+                  <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                      <i class="far fa-heart"></i>
+                  </button>
+              </div>
+            </div>
+            <div class="ml-auto"> 
+                <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+            </div>
+        </div>
+    </a>
+</div>
+  <!--   🛑 Product card 4 - Ends Here  -->
+
+  <!--   ✅ Product card 5 - Starts Here 👇 -->
+  <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+    <a href="#">
+        <img class="bg-contain" src="../images/Products/5.jpg"
+                alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+        <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">Samsung</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">Samsung Monitor 27 Inch LED IPS, FHD, 75HZ (LF27T350FHMXEG)</p>
+            <div class="flex items-center">
+                <p class="text-lg font-semibold text-black cursor-auto my-3">$8099</p>
+                <del>
+                    <p class="text-sm text-gray-600 cursor-auto ml-2">$9900</p>
+                </del>
+                <div class="ml-auto"> 
+                  <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                      <i class="far fa-heart"></i>
+                  </button>
+              </div>
+            </div>
+            <div class="ml-auto"> 
+                <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+            </div>
+        </div>
+    </a>
+</div>
+  <!--   🛑 Product card 5 - Ends Here  -->
+
+  <!--   ✅ Product card 6 - Starts Here 👇 -->
+  <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+    <a href="#">
+        <img class="bg-contain" src="../images/Products/6.jpg"
+                alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+        <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">Samsung</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">Samsung Monitor SAMSUNG ODYSSEY G5 LC27G55TQBMXEG 27 INCH, CURVED GAMING - Black</p>
+            <div class="flex items-center">
+                <p class="text-lg font-semibold text-black cursor-auto my-3">$6082</p>
+                <del>
+                    <p class="text-sm text-gray-600 cursor-auto ml-2">$8250</p>
+                </del>
+                <div class="ml-auto"> 
+                  <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                      <i class="far fa-heart"></i>
+                  </button>
+              </div>
+            </div>
+            <div class="ml-auto"> 
+                <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+            </div>
+        </div>
+    </a>
+</div>
+  <!--   🛑 Product card 6 - Ends Here  -->
+    <!--   ✅ Product card 7 - Starts Here 👇 -->
+    <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+      <a href="#">
+          <img class="bg-contain" src="../images/Products/7.jpg"
+                  alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+          <div class="px-4 py-3 w-72">
+              <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+              <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12 8GBRAM,256GB - Sky Blue</p>
+              <div class="flex items-center">
+                  <p class="text-lg font-semibold text-black cursor-auto my-3">$8999</p>
+                  <del>
+                      <p class="text-sm text-gray-600 cursor-auto ml-2">$9950</p>
+                  </del>
+                  <div class="ml-auto"> 
+                    <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+              </div>
+              <div class="ml-auto"> 
+                  <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+              </div>
+          </div>
+      </a>
+  </div>
+    <!--   🛑 Product card 7 - Ends Here  -->
+
+      <!--   ✅ Product card 8 - Starts Here 👇 -->
+      <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+        <a href="#">
+            <img class="bg-contain" src="../images/Products/8.jpg"
+                    alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">RZANTS</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">RZANTS suitable for plating anti-falling soft shell of Tecno Pova4Pro mobile phone case.</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$6082</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$8250</p>
+                    </del>
+                    <div class="ml-auto"> 
+                      <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                          <i class="far fa-heart"></i>
+                      </button>
+                  </div>
+                </div>
+                <div class="ml-auto"> 
+                    <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                </div>
+            </div>
+        </a>
+    </div>
+
+  <!--   🛑 Product card 8 - Ends Here  -->
+    <!--   ✅ Product card 9 - Starts Here 👇 -->
+    <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+      <a href="#">
+          <img class="bg-contain" src="../images/Products/9.jpg"
+                  alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+          <div class="px-4 py-3 w-72">
+              <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+              <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12C Dual SIM 4GB RAM,128GB,4G - Ocean Blue</p>
+              <div class="flex items-center">
+                  <p class="text-lg font-semibold text-black cursor-auto my-3">$5595</p>
+                  <del>
+                      <p class="text-sm text-gray-600 cursor-auto ml-2">$7500</p>
+                  </del>
+                  <div class="ml-auto"> 
+                    <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+              </div>
+              <div class="ml-auto"> 
+                  <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+              </div>
+          </div>
+      </a>
+  </div>
+
+</section>
+
+<!-- 🛑 Grid Section - Ends Here -->
+
+
+
+
+<!-- footer -->
+<hr class="w-100 h-px my-8 bg-slate-700 border-0 dark:bg-gray-700">
+
+<!-- component -->
+
+<footer class="relative bg-blueGray-200 pt-8 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap text-left lg:text-left">
+      <div class="w-full lg:w-6/12 px-4">
+        <h4 class="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
+        <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+          Find us on any of these platforms, we respond 1-2 business days.
+        </h5>
+        <div class="mt-6 lg:mb-0 mb-6">
+          <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+      </div>
+      <div class="w-full lg:w-6/12 px-4">
+        <div class="flex flex-wrap items-top mb-6">
+          <div class="w-full lg:w-4/12 px-4 ml-auto">
+            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free Products</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full lg:w-4/12 px-4">
+            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-6 border-blueGray-300">
+    <div class="flex flex-wrap items-center md:justify-between justify-center">
+      <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div class="text-sm text-blueGray-500 font-semibold py-1">
+          Copyright © <span id="get-current-year">2024</span><a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank"> by Motaz osama
+          <a href="https://www.creative-tim.com?ref=njs-profile" class="text-blueGray-500 hover:text-blueGray-800">" Epic-Tech "</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- footer ends -->
+
+    
+
+    
+    
+    <script>
+        
+        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
+            var navbarCta = document.getElementById("navbar-cta");
+            if (navbarCta.classList.contains("hidden")) {
+                navbarCta.classList.remove("hidden");
+            } else {
+                navbarCta.classList.add("hidden");
+            }
+        });
+    </script>
+    
+      
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="../src/flowbite.min.js"></script>
+  </body>
+</html>

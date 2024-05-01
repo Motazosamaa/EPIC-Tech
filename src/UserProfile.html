@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    
+        <link rel="stylesheet" href="output.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="icon" href="../images/icon.png" type="image/x-icon" /> 
+        
+        <style>
+            @media only screen and (max-width: 768px) {
+  .flex ul,.loginb,.sidebar {
+    display: none;
+
+  }
+}
+        </style>
+</head>
+<body>
+        <!-- Start Header -->
+        <header class="py-4 shadow-sm bg-gray-100">
+            <div class="container flex flex-wrap items-center justify-between">
+              <!-- logo -->
+              <a href="#">
+                <p style="font-size: 30px">
+                  <span class="text-primary">Epic</span>Tech
+                </p>
+              </a>
+              <!-- search bar -->
+              <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                  <i class="fas fa-search"></i>
+                </span>
+                <input
+                  type="text"
+                  class="w-full border border-primary border-r-0 pl-12 py-3 pr-10 rounded-l-md focus:outline-none"
+                  placeholder="search ..."
+                />
+                <button
+                  class="absolute right-0 top-0 bg-primary border-primary text-white px-8 py-3 rounded-r-md hover:bg-transparent hover:text-primary transition"
+                >
+                  Search
+                </button>
+              </div>
+              <!-- Icon -->
+              <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                <!-- wishlist -->
+                <a
+                  href="WishList.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="text-xs leading-3">Wish List</div>
+                  <span
+                    class="absolute right-0 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                    >2</span
+                  >
+                </a>
+                <!-- cart -->
+                <a
+                  href="Cart.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="fas fa-shopping-bag"></i>
+                  </div>
+                  <div class="text-xs leading-3">Cart</div>
+                  <span
+                    class="absolute -right-3 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                    >2</span
+                  >
+                </a>
+                <!-- Account -->
+                <a
+                  href="#"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="far fa-user"></i>
+                  </div>
+                  <div class="text-xs leading-3">Account</div>
+                </a>
+              </div>
+            </div>
+          </header>
+        <!-- Header END -->
+    
+        <!-- Start Navbar -->
+        <nav class="bg-gray-800 ">
+            <div class="max-w-screen-xl h-16 mx-auto px-4 flex items-center justify-between">
+                <!-- Navigation Links -->
+                <div class="flex items-center space-x-8 ">
+                    <ul class="flex flex-col md:flex-row font-medium space-y-4 md:space-y-0 md:space-x-8">
+                        <li>
+                            <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                        </li>
+                        <li>
+                            <a href="aboutUs.html" class="text-gray-200 hover:text-white transition">About Us</a>
+                        </li>
+                        <li>
+                            <a href="contactUs.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Login/Register Button -->
+                <button type="button" class="text-white bg-primary loginb hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Navigation Menu -->
+            <div class="hidden md:hidden" id="navbar-cta">
+                <ul class="flex flex-col font-medium p-4 mt-4 border rounded-lg md:flex-row md:mt-0 md:border-0">
+                    <li>
+                        <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                    </li>
+                    <li>
+                        <a href="aboutUs.html" class="text-gray-200 hover:text-white transition">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contactUs.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    </li>
+                </ul>
+                <button type="button" class="text-white mb-8 bg-primary hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+    
+               
+            </div>
+        </nav>
+        <!-- navbar END -->
+ 
+   
+
+    <div class="w-full h-full bg-white flex">
+        <div class=" bg-zinc-900 w-[300px] h-screen rounded z-10 border-r border-[#3f3f3f] sidebar">
+          <ul class="w-full my-4 text-white pl-10 mt-5">
+            <li id="li"
+              class="w-full flex cursor-pointer hover:text-[#6BAED3] pl-4 hover:pl-6 hover:bg-zinc-900 py-2 transition-all duration-300 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                <path
+                  d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              </svg>
+              <p class="ml-2">Profile info</p>
+            </li>
+            <li id="li"
+              class="w-full flex cursor-pointer hover:text-[#6BAED3] pl-4 hover:pl-6 hover:bg-zinc-900 py-2 transition-all duration-300 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-shield-lock-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5z" />
+              </svg>
+              <p class="ml-2">Security</p>
+            </li>
+            <li id="li"
+              class="w-full flex cursor-pointer hover:text-[#6BAED3] pl-4 hover:pl-6 hover:bg-zinc-900 py-2 transition-all duration-300 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-piggy-bank-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595Zm7.173 3.876a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199Zm-8.999-.65a.5.5 0 1 1-.276-.96A7.613 7.613 0 0 1 7.964 3.5c.763 0 1.497.11 2.18.315a.5.5 0 1 1-.287.958A6.602 6.602 0 0 0 7.964 4.5c-.64 0-1.255.09-1.826.254ZM5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+              <p class="ml-2">Change Password</p>
+            </li>
+            <li id="li-exit"
+              class="w-full flex cursor-pointer hover:text-[#d36b6b] pl-4 hover:pl-6 hover:bg-zinc-900 py-2 transition-all duration-300 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                <path fill-rule="evenodd"
+                  d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+              </svg>
+              <p class="ml-2">Exit</p>
+            </li>
+          </ul>
+        </div>
+        <div class="absolute my-6 ml-4 right-0 w-[65%] h-full">
+          <h1 class="text-zinc-950 mt-2 text-2xl ">Profile Info</h1>
+      
+          <div class="w-full mt-4 flex h-32">
+      
+            <div class="flex justify-center items-center w-32 h-32 group">
+              <img src="../images/profile.jpeg"
+          class="mt-2 rounded hover:brightness-50 transition-all duration-300 cursor-pointer"/>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="text-white rounded p-2 bg-zinc-900 fixed z-10 hidden group-hover:block" width="32" height="32"
+                fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                <path
+                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                <path
+                  d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
+              </svg>
+            </div>
+      
+            <div class="ml-4 flex  flex-col">
+              <label for="username" class="text-black ">Username</label>
+              <input disabled  placeholder="Motazosamaa" type="text" class="h-[40px]  mt-2 bg-gray-700 text-white border-b border-[#3f3f3f] px-1 outline-none focus:border-[#6BAED3] transition-all duration-300"/>
+              
+              <label for="age" class="text-black ">age</label>
+              <input disabled  placeholder="25" type="number" class="h-[40px]  mt-2 bg-gray-700 text-white border-b border-[#3f3f3f] px-1 outline-none focus:border-[#6BAED3] transition-all duration-300"/>
+              
+              <label for="username" class="text-black ">Email Address</label>
+              <input disabled  placeholder="Motazosamaa@outlook.com" type="text" class="h-[40px]  mt-2 bg-gray-700 text-white border-b border-[#3f3f3f] px-1 outline-none focus:border-[#6BAED3] transition-all duration-300"/>
+              
+              <label for="username" class="text-black ">Phone number</label>
+              <input disabled  placeholder="+201016450804" type="number" class="h-[40px]  mt-2 bg-gray-700 text-white border-b border-[#3f3f3f] px-1 outline-none focus:border-[#6BAED3] transition-all duration-300"/>
+              
+              <label for="username" class="text-black ">City</label>
+              <input disabled  placeholder="Assuit" type="number" class="h-[40px]  mt-2 bg-gray-700 text-white border-b border-[#3f3f3f] px-1 outline-none focus:border-[#6BAED3] transition-all duration-300"/>
+              
+              <div class="w-full flex flex-row mt-10">
+                
+
+    
+      
+              </div>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </div>
+</body>
+</html>

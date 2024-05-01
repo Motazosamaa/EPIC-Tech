@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    
+        <link rel="stylesheet" href="output.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="icon" href="../images/icon.png" type="image/x-icon" /> 
+        
+        <style>
+            @media only screen and (max-width: 768px) {
+  .flex ul,.loginb {
+    display: none;
+  }
+}
+        </style>
+</head>
+<body>
+        <!-- Start Header -->
+        <header class="py-4 shadow-sm bg-gray-100">
+            <div class="container flex flex-wrap items-center justify-between">
+              <!-- logo -->
+              <a href="index.html">
+                <p style="font-size: 30px">
+                  <span class="text-primary">Epic</span>Tech
+                </p>
+              </a>
+              <!-- search bar -->
+              <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                  <i class="fas fa-search"></i>
+                </span>
+                <input
+                  type="text"
+                  class="w-full border border-primary border-r-0 pl-12 py-3 pr-10 rounded-l-md focus:outline-none"
+                  placeholder="search ..."
+                />
+                <button
+                  class="absolute right-0 top-0 bg-primary border-primary text-white px-8 py-3 rounded-r-md hover:bg-transparent hover:text-primary transition"
+                >
+                  Search
+                </button>
+              </div>
+              <!-- Icon -->
+              <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                <!-- wishlist -->
+                <a
+                  href="WishList.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="text-xs leading-3">Wish List</div>
+                  <span
+                    class="absolute right-0 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                    >2</span
+                  >
+                </a>
+                <!-- cart -->
+                <a
+                  href="Cart.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="fas fa-shopping-bag"></i>
+                  </div>
+                  <div class="text-xs leading-3">Cart</div>
+                  <span
+                    class="absolute -right-3 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                    >2</span
+                  >
+                </a>
+                <!-- Account -->
+                <a
+                  href="UserProfile.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="far fa-user"></i>
+                  </div>
+                  <div class="text-xs leading-3">Account</div>
+                </a>
+              </div>
+            </div>
+          </header>
+        <!-- Header END -->
+    
+        <!-- Start Navbar -->
+        <nav class="bg-gray-800 ">
+            <div class="max-w-screen-xl h-16 mx-auto px-4 flex items-center justify-between">
+                <!-- Navigation Links -->
+                <div class="flex items-center space-x-8 ">
+                    <ul class="flex flex-col md:flex-row font-medium space-y-4 md:space-y-0 md:space-x-8">
+                        <li>
+                            <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                        </li>
+                        <li>
+                            <a href="aboutUs.html" class="text-gray-200 hover:text-white transition">About Us</a>
+                        </li>
+                        <li>
+                            <a href="contactUs.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Login/Register Button -->
+                <button type="button" class="text-white bg-primary loginb hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Navigation Menu -->
+            <div class="hidden md:hidden" id="navbar-cta">
+                <ul class="flex flex-col font-medium p-4 mt-4 border rounded-lg md:flex-row md:mt-0 md:border-0">
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    </li>
+                </ul>
+                <button type="button" class="text-white mb-8 bg-primary hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+    
+               
+            </div>
+        </nav>
+        <!-- navbar END -->
+    
+
+    <div class="sm:flex items-center max-w-screen-xl">
+        <div class="sm:w-1/2 p-10">
+            <div class="image object-center text-center">
+                <img src="../images/icons/pic.jpg">
+            </div>
+        </div>
+        <div class="sm:w-1/2 p-5">
+            <div class="text">
+                <span class="text-gray-500 border-b-2 border-indigo-600 uppercase">About us</span>
+                <h2 class="my-4 font-bold text-3xl  sm:text-4xl ">About <span class="text-indigo-600">Our Company</span>
+                </h2>
+                <p class="text-gray-700">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
+                    doloremque, fugiat illum magni minus nisi nulla numquam obcaecati placeat quia, repellat tempore
+                    voluptatum.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
+            var navbarCta = document.getElementById("navbar-cta");
+            if (navbarCta.classList.contains("hidden")) {
+                navbarCta.classList.remove("hidden");
+            } else {
+                navbarCta.classList.add("hidden");
+            }
+        });
+    </script>
+</body>
+</html>

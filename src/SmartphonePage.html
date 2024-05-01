@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Phones Category</title>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    
+        <link rel="stylesheet" href="output.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="icon" href="../images/icon.png" type="image/x-icon" /> 
+        
+        <style>
+    @media only screen and (max-width: 768px) {
+      .flex ul,.loginb {
+        display: none;
+      }
+    }
+    .hover-scale:hover {
+          transform: scale(1.05);
+        }
+    
+    
+        .product-container .btnCart {
+        display: none;
+    }
+    
+    .product-container:hover .btnCart {
+        display: block;
+    }
+    
+    
+    
+          </style>
+</head>
+<body>
+        <!-- Start Header -->
+        <header class="py-4 shadow-sm bg-gray-100">
+            <div class="container flex flex-wrap items-center justify-between">
+              <!-- logo -->
+              <a href="index.html">
+                <p style="font-size: 30px">
+                  <span class="text-primary">Epic</span>Tech
+                </p>
+              </a>
+              <!-- search bar -->
+              <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                  <i class="fas fa-search"></i>
+                </span>
+                <input
+                  type="text"
+                  class="w-full border border-primary border-r-0 pl-12 py-3 pr-10 rounded-l-md focus:outline-none"
+                  placeholder="search ..."
+                />
+                <button
+                  class="absolute right-0 top-0 bg-primary border-primary text-white px-8 py-3 rounded-r-md hover:bg-transparent hover:text-primary transition"
+                >
+                  Search
+                </button>
+              </div>
+              <!-- Icon -->
+              <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                <!-- wishlist -->
+                <a
+                  href="WishList.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="text-xs leading-3">Wish List</div>
+                  <span
+                    class="absolute right-0 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                    >2</span
+                  >
+                </a>
+                <!-- cart -->
+                <a
+                  href="Cart.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="fas fa-shopping-bag" ></i>
+                  </div>
+                  <div class="text-xs leading-3" >Cart</div> 
+                  <span
+                    class="absolute -right-3 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                    >2</span
+                  >
+                </a>
+                <!-- Account -->
+                <a
+                  href="UserProfile.html"
+                  class="text-center text-gray-700 hover:text-primary transition relative"
+                >
+                  <div class="text-2xl">
+                    <i class="far fa-user"></i>
+                  </div>
+                  <div class="text-xs leading-3">Account</div>
+                </a>
+              </div>
+            </div>
+          </header>
+        <!-- Header END -->
+    
+        <!-- Start Navbar -->
+        <nav class="bg-gray-800 ">
+            <div class="max-w-screen-xl h-16 mx-auto px-4 flex items-center justify-between">
+                <!-- Navigation Links -->
+                <div class="flex items-center space-x-8 ">
+                    <ul class="flex flex-col md:flex-row font-medium space-y-4 md:space-y-0 md:space-x-8">
+                        <li>
+                            <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="text-gray-200 hover:text-white transition">Top sales</a>
+                        </li>
+                        <li>
+                            <a href="aboutUs.html" class="text-gray-200 hover:text-white transition">About Us</a>
+                        </li>
+                        <li>
+                            <a href="contactUs.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Login/Register Button -->
+                <button type="button" class="text-white bg-primary loginb hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Navigation Menu -->
+            <div class="hidden md:hidden" id="navbar-cta">
+                <ul class="flex flex-col font-medium p-4 mt-4 border rounded-lg md:flex-row md:mt-0 md:border-0">
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">Top sales</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    </li>
+                </ul>
+                <button type="button" class="text-white mb-8 bg-primary hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+    
+               
+            </div>
+        </nav>
+        <!-- navbar END -->
+        <section id="Projects"
+        class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+      
+        <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+          <a href="#">
+              <img class="bg-contain" src="../images/Products/7.jpg"
+                      alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+              <div class="px-4 py-3 w-72">
+                  <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+                  <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12 8GBRAM,256GB - Sky Blue</p>
+                  <div class="flex items-center">
+                      <p class="text-lg font-semibold text-black cursor-auto my-3">$8999</p>
+                      <del>
+                          <p class="text-sm text-gray-600 cursor-auto ml-2">$9950</p>
+                      </del>
+                      <div class="ml-auto"> 
+                        <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                  </div>
+                  <div class="ml-auto"> 
+                      <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                  </div>
+              </div>
+          </a>
+      </div>
+        <!--   🛑 Product card 7 - Ends Here  -->
+    
+          <!--   ✅ Product card 8 - Starts Here 👇 -->
+          <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+            <a href="#">
+                <img class="bg-contain" src="../images/Products/8.jpg"
+                        alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+                <div class="px-4 py-3 w-72">
+                    <span class="text-gray-400 mr-3 uppercase text-xs">RZANTS</span>
+                    <p class="text-lg font-bold text-black truncate block capitalize">RZANTS suitable for plating anti-falling soft shell of Tecno Pova4Pro mobile phone case.</p>
+                    <div class="flex items-center">
+                        <p class="text-lg font-semibold text-black cursor-auto my-3">$6082</p>
+                        <del>
+                            <p class="text-sm text-gray-600 cursor-auto ml-2">$8250</p>
+                        </del>
+                        <div class="ml-auto"> 
+                          <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                              <i class="far fa-heart"></i>
+                          </button>
+                      </div>
+                    </div>
+                    <div class="ml-auto"> 
+                        <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+      <!--   🛑 Product card 8 - Ends Here  -->
+        <!--   ✅ Product card 9 - Starts Here 👇 -->
+        <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+          <a href="#">
+              <img class="bg-contain" src="../images/Products/9.jpg"
+                      alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+              <div class="px-4 py-3 w-72">
+                  <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+                  <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12C Dual SIM 4GB RAM,128GB,4G - Ocean Blue</p>
+                  <div class="flex items-center">
+                      <p class="text-lg font-semibold text-black cursor-auto my-3">$5595</p>
+                      <del>
+                          <p class="text-sm text-gray-600 cursor-auto ml-2">$7500</p>
+                      </del>
+                      <div class="ml-auto"> 
+                        <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                  </div>
+                  <div class="ml-auto"> 
+                      <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                  </div>
+              </div>
+          </a>
+      </div>
+        <!--   🛑 Product card 3 - Ends Here  -->
+      
+        <!--   ✅ Product card 4 - Starts Here 👇 -->
+        <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+          <a href="#">
+              <img class="bg-contain" src="../images/Products/7.jpg"
+                      alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+              <div class="px-4 py-3 w-72">
+                  <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+                  <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12 8GBRAM,256GB - Sky Blue</p>
+                  <div class="flex items-center">
+                      <p class="text-lg font-semibold text-black cursor-auto my-3">$8999</p>
+                      <del>
+                          <p class="text-sm text-gray-600 cursor-auto ml-2">$9950</p>
+                      </del>
+                      <div class="ml-auto"> 
+                        <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                  </div>
+                  <div class="ml-auto"> 
+                      <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                  </div>
+              </div>
+          </a>
+      </div>
+        <!--   🛑 Product card 7 - Ends Here  -->
+    
+          <!--   ✅ Product card 8 - Starts Here 👇 -->
+          <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+            <a href="#">
+                <img class="bg-contain" src="../images/Products/8.jpg"
+                        alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+                <div class="px-4 py-3 w-72">
+                    <span class="text-gray-400 mr-3 uppercase text-xs">RZANTS</span>
+                    <p class="text-lg font-bold text-black truncate block capitalize">RZANTS suitable for plating anti-falling soft shell of Tecno Pova4Pro mobile phone case.</p>
+                    <div class="flex items-center">
+                        <p class="text-lg font-semibold text-black cursor-auto my-3">$6082</p>
+                        <del>
+                            <p class="text-sm text-gray-600 cursor-auto ml-2">$8250</p>
+                        </del>
+                        <div class="ml-auto"> 
+                          <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                              <i class="far fa-heart"></i>
+                          </button>
+                      </div>
+                    </div>
+                    <div class="ml-auto"> 
+                        <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+      <!--   🛑 Product card 8 - Ends Here  -->
+        <!--   ✅ Product card 9 - Starts Here 👇 -->
+        <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+          <a href="#">
+              <img class="bg-contain" src="../images/Products/9.jpg"
+                      alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+              <div class="px-4 py-3 w-72">
+                  <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+                  <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12C Dual SIM 4GB RAM,128GB,4G - Ocean Blue</p>
+                  <div class="flex items-center">
+                      <p class="text-lg font-semibold text-black cursor-auto my-3">$5595</p>
+                      <del>
+                          <p class="text-sm text-gray-600 cursor-auto ml-2">$7500</p>
+                      </del>
+                      <div class="ml-auto"> 
+                        <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                  </div>
+                  <div class="ml-auto"> 
+                      <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                  </div>
+              </div>
+          </a>
+      </div>
+        <!--   🛑 Product card 6 - Ends Here  -->
+          <!--   ✅ Product card 7 - Starts Here 👇 -->
+          <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+            <a href="#">
+                <img class="bg-contain" src="../images/Products/7.jpg"
+                        alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+                <div class="px-4 py-3 w-72">
+                    <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+                    <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12 8GBRAM,256GB - Sky Blue</p>
+                    <div class="flex items-center">
+                        <p class="text-lg font-semibold text-black cursor-auto my-3">$8999</p>
+                        <del>
+                            <p class="text-sm text-gray-600 cursor-auto ml-2">$9950</p>
+                        </del>
+                        <div class="ml-auto"> 
+                          <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                              <i class="far fa-heart"></i>
+                          </button>
+                      </div>
+                    </div>
+                    <div class="ml-auto"> 
+                        <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+          <!--   🛑 Product card 7 - Ends Here  -->
+      
+            <!--   ✅ Product card 8 - Starts Here 👇 -->
+            <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+              <a href="#">
+                  <img class="bg-contain" src="../images/Products/8.jpg"
+                          alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+                  <div class="px-4 py-3 w-72">
+                      <span class="text-gray-400 mr-3 uppercase text-xs">RZANTS</span>
+                      <p class="text-lg font-bold text-black truncate block capitalize">RZANTS suitable for plating anti-falling soft shell of Tecno Pova4Pro mobile phone case.</p>
+                      <div class="flex items-center">
+                          <p class="text-lg font-semibold text-black cursor-auto my-3">$6082</p>
+                          <del>
+                              <p class="text-sm text-gray-600 cursor-auto ml-2">$8250</p>
+                          </del>
+                          <div class="ml-auto"> 
+                            <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                      </div>
+                      <div class="ml-auto"> 
+                          <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                      </div>
+                  </div>
+              </a>
+          </div>
+      
+        <!--   🛑 Product card 8 - Ends Here  -->
+          <!--   ✅ Product card 9 - Starts Here 👇 -->
+          <div class="product-container  w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105  hover:shadow-xl">
+            <a href="#">
+                <img class="bg-contain" src="../images/Products/9.jpg"
+                        alt="Product" class="h-80 w-72 object-cover  rounded-t-xl" />
+                <div class="px-4 py-3 w-72">
+                    <span class="text-gray-400 mr-3 uppercase text-xs">Redmi</span>
+                    <p class="text-lg font-bold text-black truncate block capitalize">Redmi 12C Dual SIM 4GB RAM,128GB,4G - Ocean Blue</p>
+                    <div class="flex items-center">
+                        <p class="text-lg font-semibold text-black cursor-auto my-3">$5595</p>
+                        <del>
+                            <p class="text-sm text-gray-600 cursor-auto ml-2">$7500</p>
+                        </del>
+                        <div class="ml-auto"> 
+                          <button type="button" class="btnCart text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                              <i class="far fa-heart"></i>
+                          </button>
+                      </div>
+                    </div>
+                    <div class="ml-auto"> 
+                        <button class="btnCart px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add to cart</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+          <!--   🛑 Product card 9 - Ends Here  -->
+          <!--   🛑 Product card 15 - Ends Here  -->
+      </section>
+      
+      <!-- 🛑 Grid Section - Ends Here -->
+      
+      
+      
+      
+      <!-- footer -->
+      <hr class="w-100 h-px my-8 bg-slate-700 border-0 dark:bg-gray-700">
+      
+      <!-- component -->
+      
+      <footer class="relative bg-blueGray-200 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
+              <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                Find us on any of these platforms, we respond 1-2 business days.
+              </h5>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                  <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                  <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                  <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free Products</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-blueGray-300">
+          <div class="flex flex-wrap items-center md:justify-between justify-center">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-blueGray-500 font-semibold py-1">
+                Copyright © <span id="get-current-year">2024</span><a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank"> by Motaz osama
+                <a href="https://www.creative-tim.com?ref=njs-profile" class="text-blueGray-500 hover:text-blueGray-800">" Epic-Tech "</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      <!-- footer ends -->
+      
+
+        <script>
+        
+            document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
+                var navbarCta = document.getElementById("navbar-cta");
+                if (navbarCta.classList.contains("hidden")) {
+                    navbarCta.classList.remove("hidden");
+                } else {
+                    navbarCta.classList.add("hidden");
+                }
+            });
+        </script>
+        
+</body>
+</html>

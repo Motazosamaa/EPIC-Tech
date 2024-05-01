@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    
+        <link rel="stylesheet" href="output.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="icon" href="../images/icon.png" type="image/x-icon" /> 
+        
+        <style>
+            @media only screen and (max-width: 768px) {
+  .flex ul,.loginb {
+    display: none;
+  }
+}
+        </style>
+</head>
+<body>
+
+    <!-- Start Header -->
+    <header class="py-4 shadow-sm bg-gray-100">
+        <div class="container flex flex-wrap items-center justify-between">
+          <!-- logo -->
+          <a href="index.html">
+            <p style="font-size: 30px">
+              <span class="text-primary">Epic</span>Tech
+            </p>
+          </a>
+          <!-- search bar -->
+          <div class="w-full max-w-xl relative flex">
+            <span class="absolute left-4 top-3 text-lg text-gray-400">
+              <i class="fas fa-search"></i>
+            </span>
+            <input
+              type="text"
+              class="w-full border border-primary border-r-0 pl-12 py-3 pr-10 rounded-l-md focus:outline-none"
+              placeholder="search ..."
+            />
+            <button
+              class="absolute right-0 top-0 bg-primary border-primary text-white px-8 py-3 rounded-r-md hover:bg-transparent hover:text-primary transition"
+            >
+              Search
+            </button>
+          </div>
+          <!-- Icon -->
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <!-- wishlist -->
+            <a
+              href="index.html"
+              class="text-center text-gray-700 hover:text-primary transition relative"
+            >
+              <div class="text-2xl">
+                <i class="far fa-heart"></i>
+              </div>
+              <div class="text-xs leading-3">Wish List</div>
+              <span
+                class="absolute right-0 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                >2</span
+              >
+            </a>
+            <!-- cart -->
+            <a
+              href="#"
+              class="text-center text-gray-700 hover:text-primary transition relative"
+            >
+              <div class="text-2xl">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="text-xs leading-3">Cart</div>
+              <span
+                class="absolute -right-3 -top-1 w-5 h-5 rounded-full items-center justify-center bg-primary text-white text-xs"
+                >2</span
+              >
+            </a>
+            <!-- Account -->
+            <a
+              href="UserProfile.html"
+              class="text-center text-gray-700 hover:text-primary transition relative"
+            >
+              <div class="text-2xl">
+                <i class="far fa-user"></i>
+              </div>
+              <div class="text-xs leading-3">Account</div>
+            </a>
+          </div>
+        </div>
+      </header>
+    <!-- Header END -->
+
+    <!-- Start Navbar -->
+    <nav class="bg-gray-800 ">
+        <div class="max-w-screen-xl h-16 mx-auto px-4 flex items-center justify-between">
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-8 ">
+                <ul class="flex flex-col md:flex-row font-medium space-y-4 md:space-y-0 md:space-x-8">
+                    <li>
+                        <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                    </li>
+                    <li>
+                        <a href="aboutUs.html" class="text-gray-200 hover:text-white transition">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contactUs.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Login/Register Button -->
+            <button type="button" class="text-white bg-primary loginb hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden" id="navbar-cta">
+            <ul class="flex flex-col font-medium p-4 mt-4 border rounded-lg md:flex-row md:mt-0 md:border-0">
+                <li>
+                    <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                </li>
+                <li>
+                    <a href="index.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                </li>
+                <li>
+                    <a href="aboutUs.html" class="text-gray-200 hover:text-white transition">About Us</a>
+                </li>
+                <li>
+                    <a href="contactUs.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                </li>
+            </ul>
+            <button type="button" class="text-white mb-8 bg-primary hover:bg-white hover:text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login/Register</button>
+
+           
+        </div>
+    </nav>
+    <!-- navbar END -->
+
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <h1 class="text-2xl font-bold my-4">Shopping Cart</h1>
+            <a href="PurchaseProcess.html" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+          Checkout
+            </a>
+        </div>
+        <div class="mt-8">
+            <div class="flex flex-col md:flex-row border-b border-gray-400 py-4">
+                <div class="flex-shrink-0">
+                    <img src="../images/Products/1.jpg" alt="Product image" class="w-32 h-32 object-cover">
+                </div>
+                <div class="mt-4 md:mt-0 md:ml-6">
+                    <h2 class="text-lg font-bold">PS4 - Blue Controller</h2>
+                    <p class="mt-2 text-gray-600"> Description</p>
+                    <div class="mt-4 flex items-center">
+                        <span class="mr-2 text-gray-600">Quantity:</span>
+                        <div class="flex items-center">
+                            <button class="bg-gray-200 rounded-l-lg px-2 py-1" disabled>-</button>
+                            <span class="mx-2 text-gray-600">1</span>
+                            <button class="bg-gray-200 rounded-r-lg px-2 py-1" disabled>+</button>
+                        </div>
+                        <span class="ml- font-bold">$800.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row border-b border-gray-400 py-4">
+                <div class="flex-shrink-0">
+                    <img src="../images/Products/2.jpg" alt="Product image" class="w-32 h-32 object-cover">
+                </div>
+                <div class="mt-4 md:mt-0 md:ml-6">
+                    <h2 class="text-lg font-bold">Sony PS4  </h2>
+                    <p class="mt-2 text-gray-600"> Description</p>
+                    <div class="mt-4 flex items-center">
+                        <span class="mr-2 text-gray-600">Quantity:</span>
+                        <div class="flex items-center">
+                            <button class="bg-gray-200 rounded-l-lg px-2 py-1" disabled>-</button>
+                            <span class="mx-2 text-gray-600">1</span>
+                            <button class="bg-gray-200 rounded-r-lg px-2 py-1" disabled>+</button>
+                        </div>
+                        <span class="ml- font-bold">$4059.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-end items-center mt-8">
+            <span class="text-gray-600 mr-4">Subtotal:</span>
+            <span class="text-xl font-bold">$4859.00</span>
+        </div>
+    </div>
+       
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
+            var navbarCta = document.getElementById("navbar-cta");
+            if (navbarCta.classList.contains("hidden")) {
+                navbarCta.classList.remove("hidden");
+            } else {
+                navbarCta.classList.add("hidden");
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="../src/flowbite.min.js"></script>
+</body>
+</html>
